@@ -9,20 +9,7 @@ import java.util.Set;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        TreeNode rightRight = new TreeNode(8);
-        TreeNode rightLeft = new TreeNode(6);
-        TreeNode leftRight = new TreeNode(4);
-        TreeNode leftLeft = new TreeNode(2);
-        TreeNode left = new TreeNode(3, leftLeft, leftRight);
-        TreeNode right = new TreeNode(7, rightLeft, rightRight);
-        TreeNode root = new TreeNode(5, left, right);
-
-        boolean foundNumber = findTarget(root, 9);
-        System.out.println("Found 9 into tree: " + foundNumber);
-    }
-
-    public static boolean findTarget(TreeNode root, int k) {
+    public boolean findTarget(TreeNode root, int k) {
         List<Integer> values = new ArrayList<>();
         findTarget(root, values);
         int idxLeft = 0;
@@ -42,7 +29,7 @@ public class Solution {
         return false;
     }
 
-    public static boolean findTargetBfs(TreeNode root, int k) {
+    public boolean findTargetBfs(TreeNode root, int k) {
         Queue<TreeNode> trees = new LinkedList<>();
         Set<Integer> values = new HashSet<>();
         if (root != null) {
@@ -68,7 +55,7 @@ public class Solution {
         return false;
     }
 
-    public static boolean findTargetSet(TreeNode root, int k) {
+    public boolean findTargetSet(TreeNode root, int k) {
         Set<Integer> values = new HashSet<>();
         return findTargetSet(root, k, values);
     }
