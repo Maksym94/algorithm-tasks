@@ -9,9 +9,9 @@ import java.util.Set;
 
 public class Solution {
 
-    public boolean findTarget(TreeNode root, int k) {
+    public boolean inOrder(TreeNode root, int k) {
         List<Integer> values = new ArrayList<>();
-        findTarget(root, values);
+        inOrder(root, values);
         int idxLeft = 0;
         int idxRight = values.size() - 1;
         while (idxLeft < idxRight) {
@@ -60,11 +60,11 @@ public class Solution {
         return findTargetSet(root, k, values);
     }
 
-    private static void findTarget(TreeNode root, List<Integer> values) {
+    private static void inOrder(TreeNode root, List<Integer> values) {
         if (root != null) {
-            findTarget(root.left, values);
+            inOrder(root.left, values);
             values.add(root.val);
-            findTarget(root.right, values);
+            inOrder(root.right, values);
         }
     }
 

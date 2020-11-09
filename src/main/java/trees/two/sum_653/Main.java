@@ -12,7 +12,7 @@ public class Main {
         TreeNode root = new TreeNode(5, left, right);
 
         Solution solution = new Solution();
-        boolean foundNumber = solution.findTarget(root, 9);
+        boolean foundNumber = solution.inOrder(root, 9);
         System.out.println("Found 9 into tree: " + foundNumber);
     }
 }
