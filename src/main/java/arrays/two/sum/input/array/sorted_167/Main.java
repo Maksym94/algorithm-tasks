@@ -1,4 +1,4 @@
-package array.two.sum.input.array.sorted_167;
+package arrays.two.sum.input.array.sorted_167;
 
 import java.util.Arrays;
 
