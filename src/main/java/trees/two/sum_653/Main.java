@@ -14,5 +14,6 @@ public class Main {
         Solution solution = new Solution();
         boolean foundNumber = solution.inOrder(root, 9);
         System.out.println("Found 9 into tree: " + foundNumber);
+        TreePrinter.printTree(root);
     }
 }
